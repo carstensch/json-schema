@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "intranet-core-v1",
+  "definitions": {
+    "Filters": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "propertydoc_subcategory_studies",
+          "propertydoc_document_finaldesign",
+          "propertydoc_status_operation",
+          "propertydoc_maincategory_report",
+          "propertydoc_section_construction"
+        ],
+        "pattern": "^.+$"
+      }
+    },
+    "ShowOnIntranet": {
+      "type": "boolean",
+      "title": "show on intranet schema",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "Countries": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "examples": [
+          "DE",
+          "SE"
+        ],
+        "enum": [
+          "DE",
+          "FR",
+          "US",
+          "CA",
+          "GB",
+          "DK",
+          "SE",
+          "CY"
+        ]
+      },
+      "pattern": "^[A-Z]{2}$"
+    },
+    "CostCenterNumbers": {
+        "type": "array"
+    },
+    "DecisionDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "User": {
+      "type": "string"
+    }
+  }
+}
